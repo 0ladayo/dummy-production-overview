@@ -38,15 +38,17 @@ df_1, df_2 = data()
 # In[ ]:
 
 
-api_token = 'pk.eyJ1IjoiMGxhZGF5byIsImEiOiJja3o4bXRlc2cweDE1MnVtdWJuZjBkMW1rIn0.Ulh37a4zmejYBzZ5Pfm8iw'
+api_token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
 
 # In[ ]:
 
 
-app=dash.Dash(__name__,external_stylesheets=[dbc.themes.GRID])
+_app=dash.Dash(__name__,external_stylesheets=[dbc.themes.GRID])
 
-app.layout=html.Div([
+app = _app.server
+
+_app.layout=html.Div([
     
     dbc.Row([dbc.Col([html.Div(html.H1('COMPANY X PRODUCTION OVERVIEW',
                                      
@@ -304,7 +306,7 @@ app.layout=html.Div([
 
 ])
 
-@app.callback(
+@_app.callback(
     
     Output('no_of_wells', 'children'),
     
@@ -516,7 +518,7 @@ def plot_update(years_chosen, wells_status):
         
         return text1, text2, text3, text4, figure1, figure2, figure3
     
-@app.callback(
+@_app.callback(
     
     Output('wells_individual_chart', 'figure'),
     
@@ -559,6 +561,6 @@ def plot_update2(wells_name):
 
 if __name__ == '__main__':
     
-    app.run_server(debug=True)
+    _app.run_server(debug=True)
     
 
