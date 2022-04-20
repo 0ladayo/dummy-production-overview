@@ -4,3 +4,8 @@ dash
 
 dash_bootstrap_components
 
+gcsfs
+
+openpyxl
+
+xlrd
