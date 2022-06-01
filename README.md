@@ -32,6 +32,12 @@
 
 > [Production Overview Dashboard](https://dummy-production-overview.nw.r.appspot.com/)
 
+### License
+
+> see the [License](https://github.com/0ladayo/production-overview-project/blob/master/LICENSE.txt) file for license rights and limitations (MIT)
+
 ### Note
 
 > because of data privacy policy, the actual wells data have been replaced with randomly generated data
+
+
